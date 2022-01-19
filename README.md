@@ -93,15 +93,21 @@
     c_v = \frac{1}{\sum_{u\neq v}shorest\ path\ length\ etween\ u\ and\ v}
     $$
 
-  - **clustering coefficient 聚类系数**：衡量节点邻居的连接程度
-    $$
-    e_v = \frac{\#(edges\ among\ neighboring\ nodes)}{\begin{pmatrix} k_v\\ 2 \\ \end{pmatrix}}\in [0,1]
-    $$
-    其中分母表示的意思是组合数的写法，所以这个式子代表$v$邻居所构成的节点对，即潜在的连接数![2021052810445748](2021052810445748.png)
+- **clustering coefficient 聚类系数**：衡量节点邻居的连接程度
+  $$
+  e_v = \frac{\#(edges\ among\ neighboring\ nodes)}{\begin{pmatrix} k_v\\ 2 \\ \end{pmatrix}}\in [0,1]
+  $$
+  其中分母表示的意思是组合数的写法，所以这个式子代表$v$邻居所构成的节点对，即潜在的连接数![2021052810445748](2021052810445748.png)
 
-    其中图一$e_v =6/6 = 1$，图二$e_v = 3/6 = 0.5$，图三$e_v = 0/6=0$
+  其中图一$e_v =6/6 = 1$，图二$e_v = 3/6 = 0.5$，图三$e_v = 0/6=0$
 
-    通过观察可以看出，
+  通过观察可以看出，聚类系数实际上是在计算包括该节点的三角形的数量，实际上是一种有根异构连通子图
+
+- **graphlets**：有根连通异构子图
+
+  - **Graphlet Degree Vector(GDV)**：Graphlet-base features for nodes 
+
+    A count vector of graphlets rooted at a given node. ![2](2.png)
 
     
 
